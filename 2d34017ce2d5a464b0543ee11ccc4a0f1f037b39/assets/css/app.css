@@ -1739,7 +1739,7 @@ textarea::-moz-focus-inner {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 105px 70px;
+  padding: 50px 95px 70px;
   border-radius: 8px;
   background: #10ad90;
   background: linear-gradient(45deg, #10ad90 0%, #0fd0ac 100%);
