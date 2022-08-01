@@ -113,28 +113,22 @@ function calculatorResult(time, money) {
 
   switch(t) {
     case 1:
-      calcDays = 30;
-      dailyInterest = 0.2;
-      interestEarned = 6;
-      APR = 72;
+      calcDays = 180;
+      dailyInterest = 0.025;
+      interestEarned = 4.5;
+      APR = 9;
       break;
     case 2:
-      calcDays = 90;
-      dailyInterest = 0.4;
-      interestEarned = 36;
-      APR = 144;
+      calcDays = 360;
+      dailyInterest = 0.05;
+      interestEarned = 18;
+      APR = 18;
       break;
     case 3:
-      calcDays = 180;
-      dailyInterest = 0.6;
-      interestEarned = 108;
-      APR = 216;
-      break;
-    case 4:
-      calcDays = 360;
-      dailyInterest = 0.8;
-      interestEarned = 288;
-      APR = 288;
+      calcDays = 720;
+      dailyInterest = 0.075;
+      interestEarned = 54;
+      APR = 27;
       break;
     default:
     //console.log("default");
