@@ -1,144 +1,226 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Prozium Protocol</title>
 
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
-        <meta name="robots" content="noindex, nofollow">
+<!doctype html>
+<html lang="cs">
 
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                background: #f2f2f2;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
+<head>
+  <meta charset="UTF-8">
+  <script src="assets/js/plugins.js?v=1.0.1"></script>
+  <script src="assets/js/app.js?v=1.0.1"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <title>Prozium Protocol</title>
 
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="format-detection" content="telephone=no">
 
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #10ac8f;
-            }
-            .protected__content__btn {
-                background-color: #10ac8f;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
+  <meta property="og:type" content="website">
 
-            }
-            .protected__content__btn:hover {
-                background-color: #0f9e83;
-            }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css?v=1.0.1">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
 
-        </style>
+<body>
+  <div id="app"><header class="mainHeader">
+  <div class="container">
+    <div class="mainHeader__logo">
+      <a href="#intro"><img src="assets/images/svg/logo.svg" alt="Prozium Protocol" height="70"/></a>
+    </div>
+    <nav class="mainHeader__menu">
+      <ul class="menu">
+        <li class="menu__item"><a href="#technology" class="menu__link">Technology</a></li>
+        <li class="menu__item"><a href="#join" class="menu__link">Join</a></li>
+        <li class="menu__item"><a href="#tokenomics" class="menu__link">Tokenomics</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Roadmap</a></li>
+        <li class="menu__item"><a href="assets/pdf/Litepaper.pdf" target="_blank" class="menu__link">Litepaper</a></li>
+        <li class="menu__item"><a href="#" class="btn btn--primary btn--sm btn--anim"><span>Open APP</span></a></li>
+      </ul>
+    </nav>
+    <div class="mainHeader__openMenu">
+      <div></div>
+    </div>
+  </div>
+</header>
+<section class="hpIntro" id="intro">
+  <div class="container">
+    <div class="grid grid__half f-align-center">
+      <div class="hpIntro__left">
+        <h2 class="h1">Decentralizing digital currency<br><strong class="hpIntro__strong">mining</strong></h2>
+        <p class="h3">By staking PRZ token, you can directly participate in real-worlds activities and earn rewards.</p>
+        <a href="assets/pdf/Litepaper.pdf" target="_blank" class="btn btn--primary btn--icon btn--anim"><span><img src="assets/images/svg/logo_ico.svg" height="28" /> Litepaper</span></a>
+      </div>
+      <div class="hpIntro__right">
+        <img class="logo" src="assets/images/svg/logo.svg" alt="" />
+        <img src="assets/images/svg/illustration.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
 
-    </head>
-
-    <body>
-
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">You entered the wrong password</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">You need a password to continue</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
-            </div>
+<div class="container">
+  <section class="defaultSection" id="technology">
+    <div class="darkBox">
+      <div class="grid grid__third">
+        <div class="darkBox__col">
+          <div class="darkBox__ico"><img src="assets/images/svg/ico_stake.svg" alt="" /></div>
+          <div class="darkBox__text">
+            <h3 class="h3">Stake</h3>
+            <p>Stake your PRZ token, earn rewards and enjoy the growth of the protocol with PRZ token becoming eventually energy-backed in the process.</p>
+          </div>
         </div>
+        <div class="darkBox__col">
+          <div class="darkBox__ico"><img src="assets/images/svg/ico_earn.svg" alt="" /></div>
+          <div class="darkBox__text">
+            <h3 class="h3">Earn</h3>
+            <p>Earn rewards in the form of PRZ token, the longer you stake, the bigger the reward. </p>
+          </div>
+        </div>
+        <div class="darkBox__col">
+          <div class="darkBox__ico"><img src="assets/images/svg/ico_mine.svg" alt="" /></div>
+          <div class="darkBox__text">
+            <h3 class="h3">Mine</h3>
+            <p>By joining our mining pool through your PRZ token you can participate in our mining operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
+<section class="bevelSection bevelSection--primary txt-center" id="join">
+  <img class="bevelSection__logo" src="assets/images/svg/logo_ico.svg" height="100%" />
+  <div class="container">
+    <h2 class="h2">How to join</h2>
+    <p>Obtain your tokens through our web application</p>
+    <a href="#" class="btn btn--secondary btn--anim"><span>Open APP</span></a>
+  </div>
+</section>
 
-            function login(secret) {
-                var hash = sha1(secret)
-                var url = hash + "/index.html"
-                var alert = document.querySelectorAll('[data-id="alert"]')
+<div class="container">
+  <section class="defaultSection txt-center" id="tokenomics">
+    <h2 class="h2">Tokenomics</h2>
+    <p class="h3">PRZ is a utility token running on Binance Smart Chain.</p>
+    <p class="h4">Initial supply: <strong>100 000 000 PRZ</strong></p>
+  </section>
 
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
+  <section class="defaultSection">
+    <h2 class="h2 txt-center">Token distribution</h2>
+    <div class="grid grid__half f-align-center">
+      <div class="graph__left">
+        <div id="piechart" style="width: 100%; height: 500px;"></div>
+      </div>
+      <div class="graph__right">
+        <ul class="defaultList"> 
+          <li class="c1"><span>Community: 40.0 %</span></li>
+          <li class="c2"><span>Backers: 20.0 %</span></li>
+          <li class="c3"><span>Development: 20.0 %</span></li>
+          <li class="c4"><span>Team: 10.0 %</span></li>
+          <li class="c5"><span>Marketing: 5.0 %</span></li>
+          <li class="c6"><span>Advisors: 3.5 %</span></li>
+          <li class="c7"><span>Reserve and future use: 1.5 %</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
-                    password[0].value = ''
-                }
-                request.send()
-            }
+  <section class="defaultSection">
+    <h2 class="h2 txt-center">Calculate your income</h2>
+    <div class="incomeCalc">
+      <button class="incomeCalc__toggle"></button>
 
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
+      <div class="grid grid__half js--calcBox" style="display:none;">
+        <div>
+          <div class="incomeCalc__control">
+            <h3 class="incomeCalc__title">For how long do you want to stake?</h3>
+            <span class="incomeCalc__value js--incomeCalcInput_time_val">6m</span>
+            <div class="incomeCalc__input">
+              <input type="range" min="1" max="3" value="1" class="slider js--incomeCalcInput_time" id="myRange">
+            </div>
+          </div>
+          <div class="incomeCalc__control">
+            <h3 class="incomeCalc__title">How much PRZ you want to stake?</h3>
+            <span class="incomeCalc__value js--incomeCalcInput_money_val">100 000$</span>
+            <div class="incomeCalc__input">
+              <input type="range" min="1000" max="100000" value="50000" class="slider js--incomeCalcInput_money" id="myRange">
+            </div>
+          </div>
+        </div>
+        <div class="incomeCalc__box">
+          <img class="incomeCalc__logo" src="assets/images/svg/logo_ico.svg" height="100%" />
+          <div class="incomeCalc__result">
+            <h3>How much PRZ token you get?</h3>
+            <p class="js--incomeCalcResult_all value">100 000$</p>
+          </div>
+          <div class="incomeCalc__result">
+            <h3>How much PRZ token you get monthly?</h3>
+            <p class="js--incomeCalcResult_month value">500$</p>
+          </div>
+          <div class="incomeCalc__result">
+            <h3>APR in %</h3>
+            <p class="js--incomeCalcResult_apr value">72</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
-    </body>
+<style>
+  .hpIntro {
+    padding:30px 0;
+  }
+  .darkBox {
+    margin:0;
+  }
+  .bevelSection {
+    margin:20px 0 90px;
+  }
+  .defaultSection{
+    margin-bottom:100px;
+  }
+</style>
+
+<footer class="mainFooter">
+  <div class="container">
+    <div class="mainFooter__middle">
+      <div class="mainFooter__block mainFooter__logoBlock">
+        <img src="assets/images/svg/logo_white.svg" alt="Prozium protocol" class="mainFooter__logo" height="60px" />
+        <p class="mainFooter__company">
+          <strong>PProtocol Vision LLC</strong><br>
+        </p>
+        <p><a href="mailto:info@proziumprotocol.com" class="mainFooter__link"><img src="assets/images/svg/ico_email.svg" alt="" width="23px" /> info@proziumprotocol.com</a></p>
+      </div>
+      <!--
+      <div class="mainFooter__block">
+        <span class="h5 font-bold"><b>General</b></span>
+        <ul>
+          <li><a href="terms.html">About us</a></li>
+          <li><a href="terms.html">Careet</a></li>
+          <li><a href="terms.html">About us</a></li>
+          <li><a href="terms.html">About us</a></li>
+        </ul>
+      </div>
+      <div class="mainFooter__block">
+        <span class="h5"><b>Technology</b></span>
+        <ul>
+          <li><a href="terms.html">About us</a></li>
+          <li><a href="terms.html">Careet</a></li>
+          <li><a href="terms.html">About us</a></li>
+          <li><a href="terms.html">About us</a></li>
+        </ul>
+      </div>
+
+      <div class="mainFooter__block">
+        <span class="h5"><b>Comunity</b></span>
+      </div>
+      -->
+    </div>
+    <div class="mainFooter__copyright">
+      <p>© 2022 | PProtocol Vision LLC</p>
+    </div>
+  </div>
+</footer>  </div>
+</body>
 </html>
